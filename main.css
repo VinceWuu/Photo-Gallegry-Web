@@ -1,0 +1,285 @@
+/* 
+    Created on 16 Jun 2022
+    Author: Vince Wu
+*/
+
+/*
+    For body style
+    Make sure no horizontal overflow
+    Make an all black background
+    Set the margin and padding
+    Set the font family
+    Set the text color
+*/
+
+body
+{
+    overflow-x: hidden;
+    background-color: #111;
+    margin: 0;
+    padding: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white
+}
+
+/*
+    For side navigation bar
+    Make sure the position is fixed
+    Make sure its height extends to whole page 
+    Set the margins and alignment as 0
+    Set the width of the navigation bar
+    Z-index for stack order
+    Vertically displays
+    Transition when button clicked
+
+*/
+nav
+{
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin-right: 0;
+    width: 18%;
+    background-color: #111;
+    display: inline-block;
+    text-align: left;
+    transition: transform 0.4s ease;
+}
+
+nav ul
+{
+    margin-top: 20px;
+    display: inline-block;
+    text-align: left;
+}
+/*
+    For the links in menu bar
+    Spaces between links
+    change the link color and remove text decoration
+    Set font size 
+    Transition when link is clicked
+*/
+nav ul li a
+{
+    padding-top: 15%;
+    padding-bottom: 10%;
+    text-decoration: none;
+    font-size: 15px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+    text-align: left;
+    text-decoration: none;
+}
+
+nav ul li a:hover, .offcanvas a:focus
+{
+    color: #666;
+}
+
+/*
+    Heading of the nav bar
+*/
+h1 a
+{
+    text-decoration: none;
+    color: #ffffff
+}
+
+h1
+{
+    padding: 28.2% 20% 5% 5%;
+    text-align: center;
+}
+/*
+    affect on the info class
+    same as the nav button 
+*/
+.info h5 
+{
+    padding-left: 15%;
+    padding-top: 80%;
+    height: 1px;
+    margin-bottom: 5%;
+}
+
+.info h5 a
+{
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.info h5 a:hover, .offcanvas a:focus
+{
+    color: #666;
+}
+
+/*
+    For all the social media buttons
+    Space from the left of the page in the nav bar
+*/
+
+.socialbtn ul
+{
+    padding-left: 20%;
+}
+
+.socialbtn ul li
+{
+    display: inline-block;
+    color: #fff;
+}
+
+/*
+    For images on the page 
+*/
+img
+{
+    padding: 0.5% 0.5% 0.5% 0.5%;
+    width: 25%;
+    height: 20%;
+    display: inline-block;
+    margin: auto;
+    transition: transform .2s ease-in-out;
+}
+
+/* Affects the content of the page 
+ * creates sace between the content and the side nav and header
+ */
+
+ .content
+ {
+     padding-left: 15.625%;
+     padding-top: 4%;
+ }
+ 
+ /* Affects the image when the mouse pointer is hovering over the image
+  * increases the image size by 0.05 and creates a cool effect
+  */
+ 
+ a:hover img 
+ {
+   transform: scale(1.05);
+ }
+ 
+ /* 
+  * changes the layout of the page if the max-width is 50 em
+  */
+ 
+ @media screen and (max-width: 50em)
+ {
+     nav 
+     {
+         padding-top: 7px;
+         transform: translate3d(-200px, 0, 0); 
+         transition: transform 0.4s ease;
+     }
+     nav h1
+     {
+         text-align: center;
+         padding-left: 50%;
+         display: inline-block;
+     }
+     nav ul
+     {
+         width: 100%;
+         height: auto;
+         position: relative;
+     }
+     nav ul li a 
+     {
+         float: none;
+         padding: 10%;
+         text-align: center;
+     }
+     
+     .info h5 
+     {
+         padding-left: 45%;
+     }
+ 
+     
+     .socialbtn ul
+     {
+         padding-left: 55%;
+     }
+    
+     img
+     {
+         padding-top: 3%;
+         padding-bottom: 1.5%;
+         width: 90%;
+         height: 80%;
+         display: inline-block;
+         margin: auto;
+         transition: transform 0.4s ease;
+     }
+     
+     /*
+      * creates a grey color nav toggle button (for tablets)
+      */
+    
+     .nav-toggle-btn
+     {
+         display: block;
+         position: absolute;
+         left: 200px;
+         top: 0px;
+         width: 40px;
+         height: 40px;
+         background-color: #666;
+     }
+     .active-nav nav
+     {
+         transform: translate3d(0,0,0);
+     }
+     
+     .active-nav .content
+     {
+         transform: translate3d(200px, 0, 0);
+     }
+     
+     #main 
+     {
+         transition: margin-left .5s;
+         /* padding: 20px; */
+     }
+     
+     /*
+      * changes the layout of the page if the max width is 480 px (for cell phones)
+      */
+     
+     @media screen and (max-width: 480px)
+     {
+         nav ul li a 
+         {
+             padding-bottom: 0.1%;
+         }
+         
+         h1
+         {
+             margin-top: 0.1%;
+             margin-bottom: 0.1%;
+             height: 1px;
+         }
+         
+         .info h5 
+         {
+             padding-top: 0;
+             height: 0;
+             margin-top: 0.1px;
+             padding-bottom: 5%;
+         }
+         
+         .socialbtn ul
+         {
+             left: 15%;
+             display: block;
+         }
+         
+     }
+ }
