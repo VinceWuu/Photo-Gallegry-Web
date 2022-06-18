@@ -7,3 +7,5 @@ Very limited experience in HTML and Javascript before but some experiences in Dj
 ------------------------------------------------------------------------------------------------------
 Example website: http://www.jensingvarsson.com/
 A website of personal blog for photographer
+Only the user of the website can edit photo archive.
+Visitors can browse photos that contain in each collections.
